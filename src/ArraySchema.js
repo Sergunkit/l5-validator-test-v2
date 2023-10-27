@@ -18,7 +18,6 @@ export default class ArraySchema {
           return iter(item, deep + 1);
         }, []);
         depthes = depthes.concat(res).filter((el) => el);
-        // console.log(Math.max(...depthes), 111, deep);
         return Math.max(...depthes) <= mDepth;
       };
       return iter(ar, 0);
